@@ -11,7 +11,7 @@
 #include "Func_Aux.h"
 
 using namespace std;
-
+//vamos ver se e desta
 
 int main() {
 	{
