@@ -1,0 +1,10 @@
+Castelo 1 2 3 5
+Castelo 1 2 3 5
+Castelo 1 2 3 5
+Castelo 1 2 3 5
+Castelo 1 2 3 5
+Ilha 9 8 7 6
+Ilha 9 8 7 6
+Ilha 9 8 7 6
+Ilha 9 8 7 6
+Ilha 9 8 7 6

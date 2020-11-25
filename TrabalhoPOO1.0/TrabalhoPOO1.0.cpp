@@ -2,6 +2,7 @@
 //Add RuiCorreia
 
 #include <iostream>
+#include <fstream>
 #include <vector>
 #include <sstream>
 #include <string>
@@ -14,12 +15,46 @@ using namespace std;
 //vamos ver se e desta vez
 
 int main() {
+
+	string nome = "Dennis";
+	string dois;
+	int x, b, c, d;
+	/*ofstream out("ficheiro.txt");
+	out << nome << 1 << 2 << 3 <<5 ;
+	out.close();*/
+
+	//ler uma linha
+	//getline(input_file,dois );
+	
+	
+	//line fica com a string "uma frase!"
+	/*cout << dois << endl;*/
+	
+
 	{
 		vector<string> opcoes = { "Sair",
 			"Acrescentar Territorio",
 			"Mostrar Territorios" };
 
+
 		Mundo a("Mundo_1");
+
+
+		//Abre o ficheiro e verifica se correu bem
+		ifstream input_file("ficheiro.txt");
+		if (!input_file) {
+			cout << "ocorreu um erro" << endl;
+			return -1;
+		}
+		//
+
+		//le do ficheiro e acrecenta um territorio ao vector "Mundo a"
+		for (int i = 0; i < 10; i++) {
+			input_file >> dois >> x >> b >> c >> d;
+			a.acrescentar(dois, x, b, c, d);
+		}
+		input_file.close();
+		//
 
 		int opcao = 0;
 		do {

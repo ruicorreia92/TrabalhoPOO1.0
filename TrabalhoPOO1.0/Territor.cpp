@@ -1,4 +1,5 @@
 #include <iostream>
+#include <fstream>
 #include <vector>
 #include <sstream>
 #include <string>
@@ -43,6 +44,7 @@ string territor::getAsString()const {
 	oss << "\nNome: " << nome
 		<< "\nResistencia: " << res
 		<< "\nProdutos: " << prod
-		<< "\nGold: " << ouro << endl;
+		<< "\nGold: " << ouro 
+		<< "\nPontos: " <<  pontos << endl;
 	return oss.str();
 }
