@@ -14,6 +14,7 @@ using namespace std;
 
 int escolheOpcao(vector<string> opcoes);
 int lerInt(string msg);
-
+void acrecentaterr();
+void listaterr();
 
 #endif // !

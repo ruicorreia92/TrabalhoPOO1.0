@@ -16,45 +16,35 @@ using namespace std;
 
 int main() {
 
-	string nome = "Dennis";
+	
 	string dois;
 	int x, b, c, d;
-	/*ofstream out("ficheiro.txt");
-	out << nome << 1 << 2 << 3 <<5 ;
-	out.close();*/
 
-	//ler uma linha
-	//getline(input_file,dois );
 	
-	
-	//line fica com a string "uma frase!"
-	/*cout << dois << endl;*/
-	
-
 	{
 		vector<string> opcoes = { "Sair",
 			"Acrescentar Territorio",
 			"Mostrar Territorios" };
 
+		////Abre o ficheiro e verifica se correu bem
+		//ifstream fich1("ficheiro.txt");
+		//if (!fich1) {
+		//	cout << "ocorreu um erro" << endl;
+		//	return -1;
+		//}
+		////
 
-		Mundo a("Mundo_1");
-
-
-		//Abre o ficheiro e verifica se correu bem
-		ifstream input_file("ficheiro.txt");
-		if (!input_file) {
-			cout << "ocorreu um erro" << endl;
-			return -1;
-		}
+		//////le do ficheiro e acrecenta um territorio ao vector "Mundo a"
+		//while (fich1) {
+		//	fich1 >> dois >> x >> b >> c >> d;
+		//	a.acrescentar(dois, x, b, c, d);
+		//}
+		//fich1.close();
 		//
-
-		//le do ficheiro e acrecenta um territorio ao vector "Mundo a"
-		for (int i = 0; i < 10; i++) {
-			input_file >> dois >> x >> b >> c >> d;
-			a.acrescentar(dois, x, b, c, d);
-		}
-		input_file.close();
-		//
+	 //   //grava os territorios do <vector> no ficheiro de texto
+		//ofstream out("ficheiro1.txt");
+	 //   out << a.getAsString();
+		//out.close();
 
 		int opcao = 0;
 		do {
@@ -63,20 +53,21 @@ int main() {
 			case 0: // Sair
 				cout << "\nSair\n";
 				break;
-			case 1: // Acrescentar rectangulo
-			{
-				a.acrescentar("Planicie", 8, 8, 8, 8);
-				//desenho.acrescentar(1,2,3,4);
+			case 1: // Acrescentar territorios
+			{  
+				acrecentaterr();
+				
 			}
 			break;
 			case 2: // Listar informacao do desenho
 			{
-				cout << a.getAsString() << endl;
+				listaterr();
 			}
 			break;
 			case 3: // Ler comandos
 			{
 				void ler_comandos();
+				
 			}
 			break;
 			}

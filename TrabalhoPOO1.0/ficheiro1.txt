@@ -1,0 +1,79 @@
+
+ nome Mundo_1 tem 11 territ 
+
+Nome: Castelo_1
+Resistencia: 1
+Produtos: 2
+Gold: 3
+Pontos: 1
+
+
+Nome: Castelo_2
+Resistencia: 1
+Produtos: 2
+Gold: 3
+Pontos: 2
+
+
+Nome: Castelo_3
+Resistencia: 1
+Produtos: 2
+Gold: 3
+Pontos: 3
+
+
+Nome: Castelo_4
+Resistencia: 1
+Produtos: 2
+Gold: 3
+Pontos: 4
+
+
+Nome: Castelo_5
+Resistencia: 1
+Produtos: 2
+Gold: 3
+Pontos: 5
+
+
+Nome: Ilha_6
+Resistencia: 9
+Produtos: 8
+Gold: 7
+Pontos: 1
+
+
+Nome: Ilha_7
+Resistencia: 9
+Produtos: 8
+Gold: 7
+Pontos: 2
+
+
+Nome: Ilha_8
+Resistencia: 9
+Produtos: 8
+Gold: 7
+Pontos: 3
+
+
+Nome: Ilha_9
+Resistencia: 9
+Produtos: 8
+Gold: 7
+Pontos: 4
+
+
+Nome: Ilha_10
+Resistencia: 9
+Produtos: 8
+Gold: 7
+Pontos: 5
+
+
+Nome: Ilha_11
+Resistencia: 9
+Produtos: 8
+Gold: 7
+Pontos: 5
+

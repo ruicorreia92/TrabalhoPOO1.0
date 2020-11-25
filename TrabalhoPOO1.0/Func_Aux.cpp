@@ -10,6 +10,7 @@
 
 using namespace std;
 
+Mundo a("Mundo_1");
 
 int escolheOpcao(vector<string> opcoes) {
 	for (unsigned int i = 0; i < opcoes.size(); ++i)
@@ -33,4 +34,20 @@ int lerInt(string msg) {
 			leu = true;
 	} while (!leu);
 	return valor;
+}
+
+void acrecentaterr(){
+	
+	string namet;
+	int quant, i;
+	cout << "Digite o nome e o numero de Territorios a Criar. Ex: <Tipo> <Quantidade>";
+	cin >> namet >> quant;
+	for (i = 0; i < quant; i++) {
+		a.acrescentar(namet, 8, 8, 8, 8);
+	}
+	return ;
+}
+
+void listaterr() {
+	cout << a.getAsString() << endl;
 }
