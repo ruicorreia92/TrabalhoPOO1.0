@@ -4,6 +4,7 @@
 #include <sstream>
 #include <string>
 #include <climits>
+#include <string.h>
 #include "Mundo.h"
 #include "territor.h"
 #include "Func_Aux.h"
@@ -38,13 +39,14 @@ int lerInt(string msg) {
 
 void acrecentaterr(){
 	
-	string namet;
+	string namet, comando, creat="Criar";
 	int quant, i;
-	cout << "Digite o nome e o numero de Territorios a Criar. Ex: <Tipo> <Quantidade>";
+	cout << "Digite o nome e o numero de Territorios a Criar. <Tipo> <Quantidade>\n";
 	cin >> namet >> quant;
-	for (i = 0; i < quant; i++) {
-		a.acrescentar(namet, 8, 8, 8, 8);
-	}
+		for (i = 0; i < quant; i++) {
+			a.acrescentar(namet, 8, 8, 8, 8);
+		}
+	
 	return ;
 }
 
