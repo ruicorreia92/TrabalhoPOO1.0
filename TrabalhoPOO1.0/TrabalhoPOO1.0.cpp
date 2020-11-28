@@ -78,24 +78,6 @@ int main() {
 }
 
 
-
-
-
-//int main()
-//{    
-//    Mundo a("Mundo_1");
-//
-//
-//
-//
-//    a.acrescentar("Ilha", 9, 8, 7, 6);
-//    a.acrescentar("Planicie", 8, 8, 8, 8);
-//    a.acrescentar("Duna", 7, 7, 7, 7);
-//    a.acrescentar("Castelo", 6, 6, 6, 6);
-//
-//    cout << a.getAsString();
-//}
-
 // Run program: Ctrl + F5 or Debug > Start Without Debugging menu
 // Debug program: F5 or Debug > Start Debugging menu
 

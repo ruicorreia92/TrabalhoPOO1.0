@@ -53,3 +53,5 @@ void acrecentaterr(){
 void listaterr() {
 	cout << a.getAsString() << endl;
 }
+
+
