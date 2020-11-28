@@ -24,7 +24,7 @@ int main() {
 	{
 		vector<string> opcoes = { "Sair",
 			"Acrescentar Territorio",
-			"Mostrar Territorios" };
+			"Mostrar Territorios","Ler Ficheiro" };
 
 		////Abre o ficheiro e verifica se correu bem
 		//ifstream fich1("ficheiro.txt");
@@ -66,7 +66,7 @@ int main() {
 			break;
 			case 3: // Ler comandos
 			{
-				void ler_comandos();
+				leficheiro("ficheiro.txt");
 				
 			}
 			break;

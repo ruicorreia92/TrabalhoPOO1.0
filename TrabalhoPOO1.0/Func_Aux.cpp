@@ -55,3 +55,17 @@ void listaterr() {
 }
 
 
+void leficheiro(string namef) {
+	int x, b, c, d;
+	string dois;
+	ifstream fich1("ficheiro.txt");
+		if (!fich1) {
+			cout << "ocorreu um erro" << endl;
+			return ;
+		}
+		while (fich1) {
+				fich1 >> dois >> x >> b >> c >> d;
+				a.acrescentar(dois, x, b, c, d);
+			}
+			fich1.close();
+}
