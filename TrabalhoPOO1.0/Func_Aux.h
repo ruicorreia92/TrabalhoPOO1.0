@@ -17,5 +17,7 @@ int lerInt(string msg);
 void acrecentaterr();
 void listaterr();
 void leficheiro(string namef);
+int verificaTipo(string t);
+int verificaQuant(char qt);
 
 #endif // !

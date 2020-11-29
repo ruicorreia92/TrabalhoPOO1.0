@@ -64,9 +64,11 @@ int main() {
 				listaterr();
 			}
 			break;
-			case 3: // Ler comandos
-			{
-				leficheiro("ficheiro.txt");
+			case 3: // criar do ficheiro
+			{   string aux;
+				cout << "Digite o nome do ficheiro: ";
+				cin >> aux;
+				leficheiro(aux);
 				
 			}
 			break;

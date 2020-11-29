@@ -4,6 +4,7 @@
 #include <sstream>
 #include <string>
 #include <climits>
+#include <cctype>
 #include <string.h>
 #include "Mundo.h"
 #include "territor.h"
@@ -39,10 +40,15 @@ int lerInt(string msg) {
 
 void acrecentaterr(){
 	
-	string namet, comando, creat="Criar";
-	int quant, i;
-	cout << "Digite o nome e o numero de Territorios a Criar. <Tipo> <Quantidade>\n";
-	cin >> namet >> quant;
+	string namet, comando;
+	int  i,flag=0, flag1=0;
+	char quant;
+	do {
+		cout << "Digite o nome e o numero de Territorios a Criar. <Tipo> <Quantidade>\n";
+		cin >> namet >> quant;
+		flag = verificaTipo(namet);
+		flag1 = verificaQuant(quant);
+	} while (flag != 1 || flag1 != 1);
 		for (i = 0; i < quant; i++) {
 			a.acrescentar(namet, 8, 8, 8, 8);
 		}
@@ -58,7 +64,7 @@ void listaterr() {
 void leficheiro(string namef) {
 	int x, b, c, d;
 	string dois;
-	ifstream fich1("ficheiro.txt");
+	ifstream fich1(namef);
 		if (!fich1) {
 			cout << "ocorreu um erro" << endl;
 			return ;
@@ -69,3 +75,24 @@ void leficheiro(string namef) {
 			}
 			fich1.close();
 }
+
+int verificaTipo(string t) {
+	vector<string> ter = { "Planicie","Montanha", "Fortaleza", "Mina", "Duna", "Castelo", "Refugio", "Pescaria" };
+	for (vector<string>::const_iterator it = ter.begin();
+		it != ter.end(); ++it) {
+		if (*it == t){
+			return 1;
+		}
+	}
+	cout << "\nTipo não existe ou foi mal Escrito.\n";
+	cout << "Exemplo: Montanha // Planicie";
+	return 0;
+}
+
+int verificaQuant(char qt) {
+
+
+
+}
+
+
