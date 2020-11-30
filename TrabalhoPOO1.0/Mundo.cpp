@@ -4,6 +4,8 @@
 #include <sstream>
 #include <string>
 #include <climits>
+#include <stdlib.h>
+#include<stdio.h>
 #include "Mundo.h"
 #include "Territor.h"
 
@@ -15,9 +17,9 @@ Mundo::Mundo(string nome1) : nome(nome1) {
     
 }
 
-void Mundo::acrescentar(const string name, int res, int prod, int gold, int pontos) {
+void Mundo::acrescentar(const string name, int res, int prod1, int prod2, int gold1, int gold2) {
   
-    territ.push_back(territor(name, res, prod, gold, pontos));
+    territ.push_back(territor(name, res, prod1, prod2, gold1, gold2));
 }
 
 

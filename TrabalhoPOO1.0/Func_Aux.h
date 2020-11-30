@@ -6,6 +6,8 @@
 #include <sstream>
 #include <string>
 #include <climits>
+#include <stdlib.h>
+#include<stdio.h>
 #pragma once
 #include "Mundo.h"
 #include "Territor.h"
@@ -18,6 +20,7 @@ void acrecentaterr();
 void listaterr();
 void leficheiro(string namef);
 int verificaTipo(string t);
-int verificaQuant(char qt);
+int verificaQuant(string qt);
+void param(int tipo, int *r, int *p1, int *p2, int *g1, int *g2);
 
 #endif // !

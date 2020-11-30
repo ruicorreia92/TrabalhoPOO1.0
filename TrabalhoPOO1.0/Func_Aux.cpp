@@ -5,10 +5,13 @@
 #include <string>
 #include <climits>
 #include <cctype>
+#include <stdlib.h>
+#include<stdio.h>
 #include <string.h>
 #include "Mundo.h"
 #include "territor.h"
 #include "Func_Aux.h"
+#include "Tipos.h"
 
 using namespace std;
 
@@ -38,23 +41,36 @@ int lerInt(string msg) {
 	return valor;
 }
 
-void acrecentaterr(){
+
+
+void acrecentaterr() {// Pede ao utilizador o tipo de territorio e a quantidade e insere no vector de territorios
+
+	string namet;
+	string qut;
+	int  i, flag = 0, flag1 = 0;
+	int quant;
+	int r, p1, p2, g1, g2;
 	
-	string namet, comando;
-	int  i,flag=0, flag1=0;
-	char quant;
+	
 	do {
 		cout << "Digite o nome e o numero de Territorios a Criar. <Tipo> <Quantidade>\n";
-		cin >> namet >> quant;
-		flag = verificaTipo(namet);
-		flag1 = verificaQuant(quant);
-	} while (flag != 1 || flag1 != 1);
-		for (i = 0; i < quant; i++) {
-			a.acrescentar(namet, 8, 8, 8, 8);
-		}
-	
-	return ;
+		cin >> namet >> qut;
+		flag = verificaTipo(namet);//verifica se o tipo existe
+		cout << "\nAQUI" << flag;
+		flag1 = verificaQuant(qut);//verifica se a quantidade é um int;
+	} while (flag == -1 || flag1 != 1);
+	  quant = stoi(qut);
+	  param(flag, &r, &p1, &p2, &g1, &g2);
+
+	for (i = 0; i < quant; i++) {
+		a.acrescentar(namet, r, p1, p2, g1, g2);
+	}
+
+	return;
 }
+
+
+
 
 void listaterr() {
 	cout << a.getAsString() << endl;
@@ -62,7 +78,7 @@ void listaterr() {
 
 
 void leficheiro(string namef) {
-	int x, b, c, d;
+	int x, b, c, d, e;
 	string dois;
 	ifstream fich1(namef);
 		if (!fich1) {
@@ -70,29 +86,53 @@ void leficheiro(string namef) {
 			return ;
 		}
 		while (fich1) {
-				fich1 >> dois >> x >> b >> c >> d;
-				a.acrescentar(dois, x, b, c, d);
+				fich1 >> dois >> x >> b >> c >> d >> e;
+				a.acrescentar(dois, x, b, c, d, e);
 			}
 			fich1.close();
 }
 
 int verificaTipo(string t) {
+	int cont = 0;
 	vector<string> ter = { "Planicie","Montanha", "Fortaleza", "Mina", "Duna", "Castelo", "Refugio", "Pescaria" };
 	for (vector<string>::const_iterator it = ter.begin();
 		it != ter.end(); ++it) {
-		if (*it == t){
-			return 1;
-		}
+		if (*it == t) {
+			return cont;
+		}cont++;
 	}
 	cout << "\nTipo não existe ou foi mal Escrito.\n";
-	cout << "Exemplo: Montanha // Planicie";
-	return 0;
+	cout << "Exemplo: Montanha // Planicie\n";
+	return -1;
 }
 
-int verificaQuant(char qt) {
-
-
-
+int verificaQuant(string qt) {
+	int i,res=1;
+	for (i = 0; i < qt.size(); i++) {
+		if (qt[i] < '0' || qt[i]> '9') 
+			 res = 0;
+	}
+	if(res == 0)
+		cout << "\nNumero invalido\n";
+	return res;
 }
 
+void param(int tipo, int* r, int* p1, int* p2, int* g1, int* g2) {
+	if (tipo == 0)//Planicie
+	{   *r = 5; *p1 = 1; *p2 = 2; *g1 = 1; *g2 = 1; }
+	if (tipo == 1)//Montanha
+	{	*r = 6; *p1 = 1; *p2 = 1; *g1 = 0; *g2 = 0; } //{ "Planicie","Montanha", "Fortaleza", "Mina", "Duna", "Castelo", "Refugio", "Pescaria" };
+	if (tipo == 2)//Fortaleza
+	{	*r = 8; *p1 = 0; *p2 = 0; *g1 = 0; *g2 = 0; }
+	if (tipo == 3)//Mina
+	{	*r = 5; *p1 = 0; *p2 = 0; *g1 = 1; *g2 = 2; }
+	if (tipo == 4)//Duna
+	{   *r = 4; *p1 = 1; *p2 = 1; *g1 = 0; *g2 = 0; }
+	if (tipo == 5)//Castelo
+	{	*r = 7; *p1 = 3; *p2 = 3; *g1 = 1; *g2 = 1; }
+	if (tipo == 6)//Refugio dos Piratas
+	{	*r = 9; *p1 = 0; *p2 = 0; *g1 = 1; *g2 = 1; }
+	if (tipo == 7)//Pescaria
+	{	*r = 9; *p1 = 2; *p2 = 4; *g1 = 0; *g2 = 0; }
 
+}

@@ -148,6 +148,7 @@
     <ClInclude Include="Func_Aux.h" />
     <ClInclude Include="Mundo.h" />
     <ClInclude Include="Territor.h" />
+    <ClInclude Include="Tipos.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

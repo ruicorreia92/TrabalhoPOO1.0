@@ -14,12 +14,13 @@ class territor
 {
 	string nome;
 	int res ;
-	int prod ;
-	int ouro ;
-	int pontos;
+	int prod1;
+	int prod2;
+	int ouro1;
+	int ouro2;
 public:
 
-	territor(const string name, int r, int p, int g, int pt);
+	territor(const string name, int r, int p1, int p2, int g1, int g2);
 	~territor();
 	int getRes()const;
 	string getNome()const;

@@ -7,6 +7,8 @@
 #include <sstream>
 #include <string>
 #include <climits>
+#include <stdlib.h>
+#include<stdio.h>
 #include "Mundo.h"
 #include "territor.h"
 #include "Func_Aux.h"
@@ -17,8 +19,6 @@ using namespace std;
 int main() {
 
 	
-	string dois;
-	int x, b, c, d;
 
 	
 	{

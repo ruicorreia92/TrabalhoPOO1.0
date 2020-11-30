@@ -20,7 +20,7 @@ public:
 	Mundo(string nome);
 
 	// acrescenta um territorio
-	void acrescentar(const string name, int res, int prod, int gold, int pontos);
+	void acrescentar(const string name, int res, int prod1, int prod2, int gold1, int gold2);
 	//retorna o nome
 	string getNome()const;
 	// retorna uma string com a descricao do objecto
