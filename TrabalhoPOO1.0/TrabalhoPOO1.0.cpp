@@ -25,21 +25,7 @@ using namespace std;
 //			"Acrescentar Territorio",
 //			"Mostrar Territorios","Ler Ficheiro" };
 //
-//		////Abre o ficheiro e verifica se correu bem
-//		//ifstream fich1("ficheiro.txt");
-//		//if (!fich1) {
-//		//	cout << "ocorreu um erro" << endl;
-//		//	return -1;
-//		//}
-//		////
-//
-//		//////le do ficheiro e acrecenta um territorio ao vector "Mundo a"
-//		//while (fich1) {
-//		//	fich1 >> dois >> x >> b >> c >> d;
-//		//	a.acrescentar(dois, x, b, c, d);
-//		//}
-//		//fich1.close();
-//		//
+//	
 //	 //   //grava os territorios do <vector> no ficheiro de texto
 //		//ofstream out("ficheiro1.txt");
 //	 //   out << a.getAsString();
@@ -86,17 +72,18 @@ int main(){
        "Maisprod", "Maismilitar", "Adquire", "Lista", "Avanca",
 	   "Grava", "Ativa", "Apaga", "Toma", "Modifica", "Fevento", "Sair"};
 	  
-	cout << "\nBem VIndo ao Jogo Estupido\n";
+	cout << "\n Bem Vindo ao\n"
+		 << "\n    IMPERIO\n";
 
 			do {
-				cout << "Digite um Comando: \n";
+				cout << "\n Digite um Comando: \n";
 				cin >> aux1;
 				opcao = verificaCom(comandos, aux1);
 
 				switch (opcao) {
 				case 0: // Carrega
 					
-					cout << "Digite o nome do ficheiro: ";
+					cout << "\n Digite o nome do ficheiro: ";
 					cin >> aux;
 					leficheiro(aux);
 					break;

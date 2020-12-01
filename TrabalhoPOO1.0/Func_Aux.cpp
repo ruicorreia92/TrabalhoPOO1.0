@@ -69,8 +69,6 @@ void acrecentaterr() {// Pede ao utilizador o tipo de territorio e a quantidade 
 }
 
 
-
-
 void listaterr() {
 	cout << a.getAsString() << endl;
 }
@@ -78,17 +76,17 @@ void listaterr() {
 
 void leficheiro(string namef) {
 	int x, b, c, d, e;
-	string dois;
+	string tipo;
 	ifstream fich1(namef);
 		if (!fich1) {
-			cout << "Ocorreu um erro ao abrir o Ficheiro: " << namef 
-				 << "\nVerifique se o nome esta correto Ex: XXXXXX.txt" << endl;
+			cout << "\n Ocorreu um erro ao abrir o Ficheiro: " << namef 
+				 << "\n Verifique se o nome esta correto Ex: XXXXXX.txt" << endl;
 			return ;
 		}
 		while (fich1) {
-				fich1 >> dois >> x >> b >> c >> d >> e;
+				fich1 >> tipo >> x >> b >> c >> d >> e;
 				if (fich1)
-				a.acrescentar(dois, x, b, c, d, e);
+				a.acrescentar(tipo, x, b, c, d, e);
 			}
 		cout << "\nFicheiro lido com sucesso\n";
 			fich1.close();
