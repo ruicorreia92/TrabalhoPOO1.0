@@ -14,72 +14,113 @@
 #include "Func_Aux.h"
 
 using namespace std;
-//vamos ver se e desta vez
 
-int main() {
+//int main() {
+//
+//	
+//
+//	
+//	{
+//		vector<string> opcoes = { "Sair",
+//			"Acrescentar Territorio",
+//			"Mostrar Territorios","Ler Ficheiro" };
+//
+//		////Abre o ficheiro e verifica se correu bem
+//		//ifstream fich1("ficheiro.txt");
+//		//if (!fich1) {
+//		//	cout << "ocorreu um erro" << endl;
+//		//	return -1;
+//		//}
+//		////
+//
+//		//////le do ficheiro e acrecenta um territorio ao vector "Mundo a"
+//		//while (fich1) {
+//		//	fich1 >> dois >> x >> b >> c >> d;
+//		//	a.acrescentar(dois, x, b, c, d);
+//		//}
+//		//fich1.close();
+//		//
+//	 //   //grava os territorios do <vector> no ficheiro de texto
+//		//ofstream out("ficheiro1.txt");
+//	 //   out << a.getAsString();
+//		//out.close();
+//
+//		int opcao = 0;
+//		do {
+//			opcao = escolheOpcao(opcoes);
+//			switch (opcao) {
+//			case 0: // Sair
+//				cout << "\nSair\n";
+//				break;
+//			case 1: // Acrescentar territorios
+//			{  
+//				acrecentaterr();
+//				
+//			}
+//			break;
+//			case 2: // Listar informacao do desenho
+//			{
+//				listaterr();
+//			}
+//			break;
+//			case 3: // criar do ficheiro
+//			{   string aux;
+//				cout << "Digite o nome do ficheiro: ";
+//				cin >> aux;
+//				leficheiro(aux);
+//				
+//			}
+//			break;
+//			}
+//
+//		} while (opcao != 0);
+//	}
+//	cin.get();
+//}
 
-	
+int main(){
 
-	
-	{
-		vector<string> opcoes = { "Sair",
-			"Acrescentar Territorio",
-			"Mostrar Territorios","Ler Ficheiro" };
+	string aux, aux1;
+	int opcao = 0;
+	vector<string> comandos = { "Carrega","Cria","Conquista","Passa", "Maisouro",
+       "Maisprod", "Maismilitar", "Adquire", "Lista", "Avanca",
+	   "Grava", "Ativa", "Apaga", "Toma", "Modifica", "Fevento", "Sair"};
+	  
+	cout << "\nBem VIndo ao Jogo Estupido\n";
 
-		////Abre o ficheiro e verifica se correu bem
-		//ifstream fich1("ficheiro.txt");
-		//if (!fich1) {
-		//	cout << "ocorreu um erro" << endl;
-		//	return -1;
-		//}
-		////
+			do {
+				cout << "Digite um Comando: \n";
+				cin >> aux1;
+				opcao = verificaCom(comandos, aux1);
 
-		//////le do ficheiro e acrecenta um territorio ao vector "Mundo a"
-		//while (fich1) {
-		//	fich1 >> dois >> x >> b >> c >> d;
-		//	a.acrescentar(dois, x, b, c, d);
-		//}
-		//fich1.close();
-		//
-	 //   //grava os territorios do <vector> no ficheiro de texto
-		//ofstream out("ficheiro1.txt");
-	 //   out << a.getAsString();
-		//out.close();
-
-		int opcao = 0;
-		do {
-			opcao = escolheOpcao(opcoes);
-			switch (opcao) {
-			case 0: // Sair
-				cout << "\nSair\n";
+				switch (opcao) {
+				case 0: // Carrega
+					
+					cout << "Digite o nome do ficheiro: ";
+					cin >> aux;
+					leficheiro(aux);
+					break;
+				case 1: // Cria
+				{  
+					acrecentaterr();
+					
+				}
 				break;
-			case 1: // Acrescentar territorios
-			{  
-				acrecentaterr();
-				
-			}
-			break;
-			case 2: // Listar informacao do desenho
-			{
-				listaterr();
-			}
-			break;
-			case 3: // criar do ficheiro
-			{   string aux;
-				cout << "Digite o nome do ficheiro: ";
-				cin >> aux;
-				leficheiro(aux);
-				
-			}
-			break;
-			}
+				case 8: // Listar informacao do desenho
+				{
+					listaterr();
+				}
+				break;
+				case 16: // sair
+				{  
+					
+				}
+				break;
+				}
+	
+			} while (opcao !=16 );
 
-		} while (opcao != 0);
-	}
-	cin.get();
 }
-
-
 // Run program: Ctrl + F5 or Debug > Start Without Debugging menu
 // Debug program: F5 or Debug > Start Debugging menu
 

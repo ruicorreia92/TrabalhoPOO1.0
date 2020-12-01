@@ -56,7 +56,6 @@ void acrecentaterr() {// Pede ao utilizador o tipo de territorio e a quantidade 
 		cout << "Digite o nome e o numero de Territorios a Criar. <Tipo> <Quantidade>\n";
 		cin >> namet >> qut;
 		flag = verificaTipo(namet);//verifica se o tipo existe
-		cout << "\nAQUI" << flag;
 		flag1 = verificaQuant(qut);//verifica se a quantidade é um int;
 	} while (flag == -1 || flag1 != 1);
 	  quant = stoi(qut);
@@ -82,13 +81,16 @@ void leficheiro(string namef) {
 	string dois;
 	ifstream fich1(namef);
 		if (!fich1) {
-			cout << "ocorreu um erro" << endl;
+			cout << "Ocorreu um erro ao abrir o Ficheiro: " << namef 
+				 << "\nVerifique se o nome esta correto Ex: XXXXXX.txt" << endl;
 			return ;
 		}
 		while (fich1) {
 				fich1 >> dois >> x >> b >> c >> d >> e;
+				if (fich1)
 				a.acrescentar(dois, x, b, c, d, e);
 			}
+		cout << "\nFicheiro lido com sucesso\n";
 			fich1.close();
 }
 
@@ -103,6 +105,19 @@ int verificaTipo(string t) {
 	}
 	cout << "\nTipo não existe ou foi mal Escrito.\n";
 	cout << "Exemplo: Montanha // Planicie\n";
+	return -1;
+}
+
+int verificaCom(vector<string> cm,string t) {
+	int cont = 0;
+	for (vector<string>::const_iterator it = cm.begin();
+		it != cm.end(); ++it) {
+		if (*it == t) {
+			return cont;
+		}cont++;
+	}
+	cout << "\nComando não existe ou foi mal Escrito.\n";
+	cout << "Exemplo: Carrega // Cria\n";
 	return -1;
 }
 
@@ -121,7 +136,7 @@ void param(int tipo, int* r, int* p1, int* p2, int* g1, int* g2) {
 	if (tipo == 0)//Planicie
 	{   *r = 5; *p1 = 1; *p2 = 2; *g1 = 1; *g2 = 1; }
 	if (tipo == 1)//Montanha
-	{	*r = 6; *p1 = 1; *p2 = 1; *g1 = 0; *g2 = 0; } //{ "Planicie","Montanha", "Fortaleza", "Mina", "Duna", "Castelo", "Refugio", "Pescaria" };
+	{	*r = 6; *p1 = 1; *p2 = 1; *g1 = 0; *g2 = 0; } 
 	if (tipo == 2)//Fortaleza
 	{	*r = 8; *p1 = 0; *p2 = 0; *g1 = 0; *g2 = 0; }
 	if (tipo == 3)//Mina

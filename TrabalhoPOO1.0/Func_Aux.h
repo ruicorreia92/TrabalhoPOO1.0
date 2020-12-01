@@ -22,5 +22,6 @@ void leficheiro(string namef);
 int verificaTipo(string t);
 int verificaQuant(string qt);
 void param(int tipo, int *r, int *p1, int *p2, int *g1, int *g2);
+int verificaCom(vector<string> cm, string t);
 
 #endif // !
