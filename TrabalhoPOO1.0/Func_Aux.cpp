@@ -73,24 +73,24 @@ void listaterr() {
 	cout << a.getAsString() << endl;
 }
 
-//
-//void leficheiro(string namef) {
-//	int x, b, c, d, e;
-//	string tipo;
-//	ifstream fich1(namef);
-//		if (!fich1) {
-//			cout << "\n Ocorreu um erro ao abrir o Ficheiro: " << namef 
-//				 << "\n Verifique se o nome esta correto Ex: XXXXXX.txt" << endl;
-//			return ;
-//		}
-//		while (fich1) {
-//				fich1 >> tipo >> x >> b >> c >> d >> e;
-//				if (fich1)
-//				a.acrescentar(tipo, x, b, c, d, e);
-//			}
-//		cout << "\nFicheiro lido com sucesso\n";
-//			fich1.close();
-//}
+
+void leficheiro(string namef) {
+	int x, b, c, d, e;
+	string tipo;
+	ifstream fich1(namef);
+		if (!fich1) {
+			cout << "\n Ocorreu um erro ao abrir o Ficheiro: " << namef 
+				 << "\n Verifique se o nome esta correto Ex: XXXXXX.txt" << endl;
+			return ;
+		}
+		while (fich1) {
+				fich1 >> tipo >> x >> b >> c >> d >> e;
+				if (fich1)
+				a.acrescentar(tipo, x, b, c, d, e);
+			}
+		cout << "\nFicheiro lido com sucesso\n";
+			fich1.close();
+}
 
 int verificaTipo(string t) {
 	int cont = 0;
