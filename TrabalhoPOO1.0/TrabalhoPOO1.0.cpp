@@ -15,54 +15,7 @@
 
 using namespace std;
 
-//int main() {
-//
-//	
-//
-//	
-//	{
-//		vector<string> opcoes = { "Sair",
-//			"Acrescentar Territorio",
-//			"Mostrar Territorios","Ler Ficheiro" };
-//
-//	
-//	 //   //grava os territorios do <vector> no ficheiro de texto
-//		//ofstream out("ficheiro1.txt");
-//	 //   out << a.getAsString();
-//		//out.close();
-//
-//		int opcao = 0;
-//		do {
-//			opcao = escolheOpcao(opcoes);
-//			switch (opcao) {
-//			case 0: // Sair
-//				cout << "\nSair\n";
-//				break;
-//			case 1: // Acrescentar territorios
-//			{  
-//				acrecentaterr();
-//				
-//			}
-//			break;
-//			case 2: // Listar informacao do desenho
-//			{
-//				listaterr();
-//			}
-//			break;
-//			case 3: // criar do ficheiro
-//			{   string aux;
-//				cout << "Digite o nome do ficheiro: ";
-//				cin >> aux;
-//				leficheiro(aux);
-//				
-//			}
-//			break;
-//			}
-//
-//		} while (opcao != 0);
-//	}
-//	cin.get();
-//}
+
 
 int main(){
 
