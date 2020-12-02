@@ -9,6 +9,7 @@
 #include <climits>
 #include <stdlib.h>
 #include<stdio.h>
+#include <cstdio>
 #include "Mundo.h"
 #include "territor.h"
 #include "Func_Aux.h"
@@ -17,33 +18,45 @@ using namespace std;
 
 
 
-int main(){
+int main() {
 
-	string aux, aux1;
+	string aux, aux1, aux2, a;
 	int opcao = 0;
+	int it = 0, cont, flag = 0;
 	vector<string> comandos = { "Carrega","Cria","Conquista","Passa", "Maisouro",
-       "Maisprod", "Maismilitar", "Adquire", "Lista", "Avanca",
-	   "Grava", "Ativa", "Apaga", "Toma", "Modifica", "Fevento", "Sair"};
-	  
+	   "Maisprod", "Maismilitar", "Adquire", "Lista", "Avanca",
+	   "Grava", "Ativa", "Apaga", "Toma", "Modifica", "Fevento", "Sair" };
+
 	cout << "\n Bem Vindo ao\n"
-		 << "\n    IMPERIO\n";
+		<< "\n    IMPERIO\n";
 
+	do {
+		cout << "\n Digite um Comando: \n";
+		cin >> aux1;
+		opcao = verificaCom(comandos, aux1);
+
+		if (opcao == 0) {
 			do {
-				cout << "\n Digite um Comando: \n";
-				cin >> aux1;
-				opcao = verificaCom(comandos, aux1);
+				if (flag == 1) {
+					cout << "Pressione Enter para continuar..." << endl;
+				}
+				a = getchar();
+				flag = 1;
+				aux2 = leComandos("comandos.txt", &it);
+				//it++;
 
-				switch (opcao) {
+				cont = verificaCom(comandos, aux2);
+				switch (cont) {
 				case 0: // Carrega
-					
-					cout << "\n Digite o nome do ficheiro: ";
-					cin >> aux;
-					leficheiro(aux);
+
+					/*criadoficheiro(aux2);*/
+
 					break;
 				case 1: // Cria
-				{  
-					acrecentaterr();
-					
+				{
+					/*acrecentaterr();*/
+					criadoficheiro("ficheiro.txt");
+
 				}
 				break;
 				case 8: // Listar informacao do desenho
@@ -52,13 +65,44 @@ int main(){
 				}
 				break;
 				case 16: // sair
-				{  
-					
+				{
+					cout << "\nFim da leitura de comandos\n";
 				}
 				break;
 				}
-	
-			} while (opcao !=16 );
+
+			} while (cont != 16);
+
+			it = 0;
+			opcao = -1;
+		}
+
+		switch (opcao) {
+		case 0: // Carrega
+
+			cout << "\n Digite o nome do ficheiro: ";
+			cin >> aux;
+			criadoficheiro(aux);
+			break;
+		case 1: // Cria
+		{
+			acrecentaterr();
+
+		}
+		break;
+		case 8: // Listar informacao do desenho
+		{
+			listaterr();
+		}
+		break;
+		case 16: // sair
+		{
+
+		}
+		break;
+		}
+
+	} while (opcao != 16);
 
 }
 // Run program: Ctrl + F5 or Debug > Start Without Debugging menu

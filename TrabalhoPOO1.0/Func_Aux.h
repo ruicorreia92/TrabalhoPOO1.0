@@ -18,10 +18,11 @@ int escolheOpcao(vector<string> opcoes);
 int lerInt(string msg);
 void acrecentaterr();
 void listaterr();
-void leficheiro(string namef);
+void criadoficheiro(string namef);
+string leComandos(string namef, int* it);
 int verificaTipo(string t);
 int verificaQuant(string qt);
-void param(int tipo, int *r, int *p1, int *p2, int *g1, int *g2);
+void param(int tipo, int* r, int* p1, int* p2, int* g1, int* g2);
 int verificaCom(vector<string> cm, string t);
 
 #endif // !

@@ -13,7 +13,7 @@ using namespace std;
 class territor
 {
 	string nome;
-	int res ;
+	int res;
 	int prod1;
 	int prod2;
 	int ouro1;

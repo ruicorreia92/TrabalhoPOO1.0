@@ -20,12 +20,12 @@ territor::territor(const string name, int r, int p1, int p2, int g1, int g2) {
 	ostr << Idterr;
 	s = ostr.str();
 
-	nome = name +Idund + s;
+	nome = name + Idund + s;
 	res = r;
 	prod1 = p1;
 	prod2 = p2;
 	ouro1 = g1;
-    ouro2 = g2;
+	ouro2 = g2;
 	Idterr++;
 }
 
@@ -48,7 +48,7 @@ string territor::getAsString()const {
 		<< "\nResistencia: " << res
 		<< "\nProdutos1: " << prod1
 		<< "\nProdutos2: " << prod2
-		<< "\nGold1: " << ouro1 
+		<< "\nGold1: " << ouro1
 		<< "\nGold2: " << ouro2 << endl;
 	return oss.str();
 }
