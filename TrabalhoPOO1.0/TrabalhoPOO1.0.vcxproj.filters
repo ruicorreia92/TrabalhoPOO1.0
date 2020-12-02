@@ -27,6 +27,9 @@
     <ClCompile Include="Func_Aux.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="Territ_inic.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Territor.h">
@@ -39,6 +42,9 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="Tipos.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Territ_inic.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

@@ -119,8 +119,8 @@ int verificaTipo(string t) {
 			return cont;
 		}cont++;
 	}
-	cout << "\nTipo não existe ou foi mal Escrito.\n";
-	cout << "Exemplo: Montanha // Planicie\n";
+	cout << "\nTipo nao existe ou foi mal Escrito.\n";
+	cout << "\nExemplo: Montanha // Planicie\n";
 	return -1;
 }
 
@@ -132,7 +132,7 @@ int verificaCom(vector<string> cm, string t) {
 			return cont;
 		}cont++;
 	}
-	cout << "\nComando não existe ou foi mal Escrito.\n";
+	cout << "\nComando nao existe ou foi mal Escrito.\n";
 	cout << "Exemplo: Carrega // Cria\n";
 	return -1;
 }
@@ -144,7 +144,7 @@ int verificaQuant(string qt) {
 			res = 0;
 	}
 	if (res == 0)
-		cout << "\nNumero invalido\n";
+		cout << "\nNumero Invalido\n";
 	return res;
 }
 

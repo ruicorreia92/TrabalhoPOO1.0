@@ -142,12 +142,14 @@
     <ClCompile Include="Func_Aux.cpp" />
     <ClCompile Include="Mundo.cpp" />
     <ClCompile Include="Territor.cpp" />
+    <ClCompile Include="Territ_inic.cpp" />
     <ClCompile Include="TrabalhoPOO1.0.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Func_Aux.h" />
     <ClInclude Include="Mundo.h" />
     <ClInclude Include="Territor.h" />
+    <ClInclude Include="Territ_inic.h" />
     <ClInclude Include="Tipos.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
