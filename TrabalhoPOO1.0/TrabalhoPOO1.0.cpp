@@ -13,6 +13,7 @@
 #include "Mundo.h"
 #include "territor.h"
 #include "Func_Aux.h"
+#include "utilis.h"
 
 using namespace std;
 
@@ -20,6 +21,7 @@ using namespace std;
 
 int main() {
 
+	initRandom();
 	string aux, aux1, aux2, a;
 	int opcao = 0;
 	int it = 0, cont, flag = 0;
@@ -57,6 +59,11 @@ int main() {
 					/*acrecentaterr();*/
 					criadoficheiro("ficheiro.txt");
 
+				}
+				break;
+				case 2: // Listar informacao do desenho
+				{
+					conquiterr();
 				}
 				break;
 				case 8: // Listar informacao do desenho

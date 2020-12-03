@@ -30,6 +30,9 @@
     <ClCompile Include="Territ_inic.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="utilis.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Territor.h">
@@ -45,6 +48,9 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="Territ_inic.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="utilis.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

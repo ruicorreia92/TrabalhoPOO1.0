@@ -18,6 +18,7 @@ int escolheOpcao(vector<string> opcoes);
 int lerInt(string msg);
 void acrecentaterr();
 void listaterr();
+void conquiterr();
 void criadoficheiro(string namef);
 string leComandos(string namef, int* it);
 int verificaTipo(string t);

@@ -6,12 +6,13 @@
 #include <climits>
 #include <cctype>
 #include <stdlib.h>
-#include<stdio.h>
+#include <stdio.h>
 #include <string.h>
 #include "Mundo.h"
 #include "territor.h"
 #include "Func_Aux.h"
 #include "Tipos.h"
+#include "utilis.h"
 
 using namespace std;
 
@@ -146,6 +147,12 @@ int verificaQuant(string qt) {
 	if (res == 0)
 		cout << "\nNumero Invalido\n";
 	return res;
+}
+
+void conquiterr() {
+
+
+
 }
 
 void param(int tipo, int* r, int* p1, int* p2, int* g1, int* g2) {

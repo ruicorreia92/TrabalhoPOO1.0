@@ -144,6 +144,7 @@
     <ClCompile Include="Territor.cpp" />
     <ClCompile Include="Territ_inic.cpp" />
     <ClCompile Include="TrabalhoPOO1.0.cpp" />
+    <ClCompile Include="utilis.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Func_Aux.h" />
@@ -151,6 +152,7 @@
     <ClInclude Include="Territor.h" />
     <ClInclude Include="Territ_inic.h" />
     <ClInclude Include="Tipos.h" />
+    <ClInclude Include="utilis.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
