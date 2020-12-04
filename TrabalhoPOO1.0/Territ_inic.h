@@ -10,10 +10,10 @@
 #include <climits>
 #include <stdlib.h>
 #include<stdio.h>
-#pragma once
 #include "Mundo.h"
 #include "Territ_inic.h"
 #include "Territor.h"
+#pragma once
 
 using namespace std;
 
@@ -27,11 +27,11 @@ class Territ_inic
 
 public:
 
-	/*Territ_inic(const string name, int r, int p1,  int g1);
+	Territ_inic(const string name, int r, int p1,  int g1);
 	~Territ_inic();
 	int getRes()const;
 	string getNome()const;
-	string getAsString()const;*/
+	string getAsString()const;
 };
 
 #endif // !TERRIT_INIC_H

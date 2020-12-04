@@ -11,3 +11,39 @@
 
 using namespace std;
 
+int Idterr = 1;
+char Idund = '_';
+string s;
+
+Territ_inic::Territ_inic(const string name, int r, int p1, int g1) {
+	ostringstream ostr;
+	ostr << nome;
+	s = ostr.str();
+
+	nome = name + Idund + s;
+	res = r;
+	prod1 = p1;
+	ouro1 = g1;
+}
+
+Territ_inic::~Territ_inic() {
+	/*cout << "destruido:" << getNome();*/
+
+}
+string Territ_inic::getNome()const {
+
+	return nome;
+}
+int Territ_inic::getRes()const {
+
+	return res;
+}
+
+string Territ_inic::getAsString()const {
+	ostringstream oss;
+	oss << "\nNome: " << nome
+		<< "\nResistencia: " << res
+		<< "\nProdutos1: " << prod1
+		<< "\nGold1: " << ouro1 << endl;
+	return oss.str();
+}
