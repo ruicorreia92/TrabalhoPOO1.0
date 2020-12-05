@@ -23,10 +23,11 @@ class Territ_inic
 	int res;
 	int prod1;
 	int ouro1;
+	int pontos;
 
 public:
 
-	Territ_inic(const string name, int r, int p1,  int g1);
+	Territ_inic(const string name, int r, int p1,  int g1, int pt);
 	~Territ_inic();
 	int getRes()const;
 	string getNome()const;
