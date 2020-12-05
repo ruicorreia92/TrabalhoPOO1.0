@@ -26,8 +26,8 @@ void Mundo::acrescentar(const string name, int res, int prod1, int prod2, int go
 string Mundo::getAsString()const {
 	ostringstream oss;
 
-	oss << "\n Nome " << nome
-		<< " tem " << territ.size() << " territorios \n";
+	oss << "\n Nome: " << nome
+		<< " Tem " << territ.size() << " territorios \n";
 
 	for (vector<territor>::const_iterator it = territ.begin();
 		it != territ.end(); ++it) {
