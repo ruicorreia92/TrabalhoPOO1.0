@@ -19,7 +19,7 @@ using namespace std;
 class Territ_inic
 {   
 	vector<territor> terrconqui;
-	string nome;
+	string nomeIni;
 	int res;
 	int prod1;
 	int ouro1;
@@ -27,11 +27,11 @@ class Territ_inic
 
 public:
 
-	Territ_inic(const string name, int r, int p1,  int g1, int pt);
+	/*Territ_inic(const string name, int r, int p1,  int g1, int pt);
 	~Territ_inic();
 	int getRes()const;
 	string getNome()const;
-	string getAsString()const;
+	string getAsString()const;*/
 };
 
 #endif // !TERRIT_INIC_H
