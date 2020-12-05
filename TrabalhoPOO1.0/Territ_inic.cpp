@@ -27,6 +27,7 @@ Territ_inic::Territ_inic(const string name, int r, int p1, int g1) {
 }
 
 Territ_inic::~Territ_inic() {
+	
 	/*cout << "destruido:" << getNome();*/
 
 }

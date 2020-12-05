@@ -11,7 +11,6 @@
 #include <stdlib.h>
 #include<stdio.h>
 #include "Mundo.h"
-#include "Territ_inic.h"
 #include "Territor.h"
 #pragma once
 
