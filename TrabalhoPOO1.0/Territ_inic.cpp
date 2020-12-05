@@ -9,7 +9,6 @@
 #include "Territ_inic.h"
 #include "Territor.h"
 #include "utilis.h"
-//Rui Correia
 
 using namespace std;
 
