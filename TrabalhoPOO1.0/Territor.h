@@ -23,6 +23,10 @@ public:
 	territor(const string name, int r, int p1, int p2, int g1, int g2);
 	~territor();
 	int getRes()const;
+	int getP1()const;
+	int getP2()const;
+	int getG1()const;
+	int getG2()const;
 	string getNome()const;
 	string getAsString()const;
 };

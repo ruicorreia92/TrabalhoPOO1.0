@@ -94,7 +94,12 @@ int main() {
 
 		}
 		break;
-		case 8: // Listar informacao do desenho
+		case 2: // <Conquista>  Inicia a tentativa de conquista
+		{
+			conquiterr();
+		}
+		break;
+		case 8: // <Lista>  Mostra no ecra a Informação do territorio inicial e dos territorios do mundo
 		{
 			listaterr();
 		}

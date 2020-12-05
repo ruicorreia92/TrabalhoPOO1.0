@@ -33,6 +33,7 @@ territor::~territor() {
 	/*cout << "destruido:" << getNome();*/
 
 }
+
 string territor::getNome()const {
 
 	return nome;
@@ -41,6 +42,23 @@ int territor::getRes()const {
 
 	return res;
 }
+int territor::getP1()const {
+
+	return prod1;
+}
+int territor::getP2()const {
+
+	return prod2;
+}
+int territor::getG1()const {
+
+	return ouro1;
+}
+int territor::getG2()const{
+
+	return ouro2;
+}
+
 
 string territor::getAsString()const {
 	ostringstream oss;

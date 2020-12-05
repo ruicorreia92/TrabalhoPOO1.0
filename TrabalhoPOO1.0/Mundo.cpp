@@ -37,6 +37,34 @@ string Mundo::getAsString()const {
 	return oss.str();
 }
 
+
+int Mundo::verificavector(string str, int *resis) {
+
+	for (vector<territor>::const_iterator it = territ.begin(); it != territ.end(); ++it) {
+		if (it->getNome() == str) {
+			*resis = it->getRes();
+			return 1;
+		}
+	}
+	return 0;
+}
+
+int Mundo::remove1(string namet,int *r, int *p1, int *p2, int *gd1, int *gd2) {
+
+	for (vector<territor>::const_iterator it = territ.begin(); it != territ.end(); ++it) {
+		if (it->getNome() == namet) {
+			*r = it->getRes();
+			*p1 = it->getP1();
+			*p2 = it->getP2();
+			*gd1 = it->getG1();
+			*gd2 = it->getG2();
+			territ.erase(it);
+			return 1;
+		}
+	}return 0;
+
+}
+
 string Mundo::getNome()const {
 	return nome;
 }

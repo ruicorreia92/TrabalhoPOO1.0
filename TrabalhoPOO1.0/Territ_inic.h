@@ -33,6 +33,8 @@ public:
 	void conquist(const string name, int res, int prod1, int prod2, int gold1, int gold2);
 	//retorna o nome
 	string getNome()const;
+	// retorna a resistencia do terrirotrio inicial
+	int getArmy()const;
 	// retorna uma string com a descricao do objecto
 	string getAsString()const;
 	~Territ_inic();

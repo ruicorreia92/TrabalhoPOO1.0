@@ -58,6 +58,10 @@ string Territ_inic::getNome()const {
 	return nomeIni;
 }
 
+int Territ_inic::getArmy()const {
+	return army;
+}
+
 Territ_inic::~Territ_inic() {
 	cout << " Destruido: " << getNome() << endl;
 }

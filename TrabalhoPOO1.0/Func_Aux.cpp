@@ -59,7 +59,7 @@ void acrecentaterr() {// Pede ao utilizador o tipo de territorio e a quantidade 
 
 
 	do {
-		cout << "Digite o nome e o numero de Territorios a Criar. <Tipo> <Quantidade>\n";
+		cout << " Digite o nome e o numero de Territorios a Criar. <Tipo> <Quantidade>\n";
 		cin >> namet >> qut;
 		flag = verificaTipo(namet);//verifica se o tipo existe
 		flag1 = verificaQuant(qut);//verifica se a quantidade é um int;
@@ -116,7 +116,7 @@ void criadoficheiro(string namef) {
 			a.acrescentar(tipo, x, b, c, d, e);
 		cont++;
 	}
-	cout << "\ Foram Criados: " << cont << " territorios\n\n";
+	cout << "\n Foram Criados: " << cont << " territorios\n\n";
 	fich1.close();
 }
 
@@ -158,11 +158,44 @@ int verificaQuant(string qt) {
 	return res;
 }
 
-void conquiterr() {
+int transferTerr(string nometerr) {
+	string name;
+	int confirm;
+	int res, pr1, pr2, g1, g2;
+	confirm = a.remove1(nometerr, &res, &pr1, &pr2, &g1, &g2);
+	if (confirm == 1) {
+		ini.conquist(name, res, pr1, pr2, g1, g2);
+		return 1;
+	}
+	return 0;
+}
 
+
+void conquiterr() {
+	initRandom();
+	string nTer;
+	int resT = 0;
+	int flag, nAle = 0, checkT;
+	do {
+		cout << "\n Qual o territorio que deseja conquistar: \n";
+		cin >> nTer;
+		flag = a.verificavector(nTer, &resT);
+		if (flag == 0) {
+			cout << "\n O Territorio escolhido nao existe\n";
+		}
+	} while (flag == 0);
+	nAle = intUniformRnd(0, 3);
+	nAle += ini.getArmy();
+	if (nAle > resT) {
+	checkT = transferTerr(nTer);
+	if (checkT == 1) {
+		cout << "\n Territorio: " << nTer << " foi conquistado\n";
+	}
+	}
 
 
 }
+
 
 void param(int tipo, int* r, int* p1, int* p2, int* g1, int* g2) {
 	if (tipo == 0)//Planicie
