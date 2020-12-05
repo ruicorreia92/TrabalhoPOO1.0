@@ -44,9 +44,6 @@
     <ClInclude Include="Func_Aux.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Tipos.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="Territ_inic.h">
       <Filter>Header Files</Filter>
     </ClInclude>

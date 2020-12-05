@@ -11,6 +11,7 @@
 #include<stdio.h>
 #include <cstdio>
 #include "Mundo.h"
+#include "Territ_inic.h"
 #include "territor.h"
 #include "Func_Aux.h"
 #include "utilis.h"
@@ -18,11 +19,11 @@
 using namespace std;
 
 
-
 int main() {
 
 	initRandom();
-	string aux, aux1, aux2, a;
+
+	string aux, aux1, aux2, wait;
 	int opcao = 0;
 	int it = 0, cont, flag = 0;
 	vector<string> comandos = { "Carrega","Cria","Conquista","Passa", "Maisouro",
@@ -37,43 +38,39 @@ int main() {
 		cin >> aux1;
 		opcao = verificaCom(comandos, aux1);
 
-		if (opcao == 0) {
+		if (opcao == 0) {//se escolher o comando Carrega
 			do {
 				if (flag == 1) {
-					cout << "Pressione Enter para continuar..." << endl;
+					cout << " Pressione Enter para continuar..." << endl;
 				}
-				a = getchar();
+				wait = getchar();
 				flag = 1;
 				aux2 = leComandos("comandos.txt", &it);
-				//it++;
+			
 
 				cont = verificaCom(comandos, aux2);
 				switch (cont) {
-				case 0: // Carrega
-
-					/*criadoficheiro(aux2);*/
-
-					break;
-				case 1: // Cria
+			
+				case 1: // <Cria>  Cria Territorios lidos de um ficheiro de texto
 				{
-					/*acrecentaterr();*/
+
 					criadoficheiro("ficheiro.txt");
 
 				}
 				break;
-				case 2: // Listar informacao do desenho
+				case 2: // <Conquista>  Inicia a tentativa de conquista
 				{
 					conquiterr();
 				}
 				break;
-				case 8: // Listar informacao do desenho
+				case 8: // <Lista>  Mostra no ecra a Informação do territorio inicial e dos territorios do mundo
 				{
 					listaterr();
 				}
 				break;
-				case 16: // sair
+				case 16: // <sair>
 				{
-					cout << "\nFim da leitura de comandos\n";
+					cout << "\n Fim da leitura de comandos\n";
 				}
 				break;
 				}

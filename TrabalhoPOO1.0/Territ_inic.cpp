@@ -12,53 +12,49 @@
 
 using namespace std;
 
-//#define string nomeIni = "Meu Reino";
-//
-//int Idini = 1;
-//char und = '_';
-//string st;
-//
-//Territ_inic::Territ_inic(const string name, int r, int p1, int g1, int pt) {
-//	ostringstream ostr;
-//	ostr << nomeIni;
-//	st = ostr.str();
-//
-//	nomeIni = name + Idini + str;
-//	res = r;
-//	prod1 = p1;
-//	ouro1 = g1;
-//	pontos = pt;
-//}
-//
-//Territ_inic::~Territ_inic() {
-//	
-//	/*cout << "destruido:" << getNome();*/
-//
-//}
-//string Territ_inic::getNome()const {
-//
-//	return nomeIni;
-//}
-//int Territ_inic::getRes()const {
-//
-//	return res;
-//}
-//
-//
-//string Territ_inic::getAsString()const {
-//	ostringstream oss;
-//
-//	oss << "\nNome: " << nomeIni
-//		<< "\nResistencia: " << res
-//		<< "\nProdutos1: " << prod1
-//		<< "\nGold1: " << ouro1
-//		<< "\nPontos: " << pontos
-//		<< " tem " << terrconqui.size() << " territorios \n";
-//
-//	for (vector<territor>::const_iterator it1 = terrconqui.begin();
-//		it1 != terrconqui.end(); ++it1) {
-//		oss << it1->getAsString() << endl;
-//	}
-//
-//	return oss.str();
-//}
+
+
+Territ_inic::Territ_inic(string nome2, int r, int amy, int p1, int g1, int ptt) {
+
+	nomeIni = nome2;
+	res = r;
+	army = amy;
+	prod1 = p1;
+	ouro1 = g1;
+	pontos = ptt;
+
+
+}
+
+void Territ_inic::conquist(const string name, int res, int prod1, int prod2, int gold1, int gold2) {
+
+	terrconqui.push_back(territor(name, res, prod1, prod2, gold1, gold2));
+}
+
+
+string Territ_inic::getAsString()const {
+	ostringstream oss;
+
+	oss << "\n Nome " << nomeIni
+		<< "\n Resistencia " << res
+		<< "\n Forca Militar " << army
+		<< "\n Produtos " << prod1
+		<< "\n Ouro " << ouro1
+		<< "\n Pontos conquistados " << pontos
+		<< "\n tem " << terrconqui.size() << " territorios conquistados\n";
+
+	for (vector<territor>::const_iterator it = terrconqui.begin();
+		it != terrconqui.end(); ++it) {
+		oss << it->getAsString() << endl;
+	}
+
+	return oss.str();
+}
+
+string Territ_inic::getNome()const {
+	return nomeIni;
+}
+
+Territ_inic::~Territ_inic() {
+	cout << " Destruido: " << getNome() << endl;
+}

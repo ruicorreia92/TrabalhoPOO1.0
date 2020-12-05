@@ -42,5 +42,5 @@ string Mundo::getNome()const {
 }
 
 Mundo::~Mundo() {
-	cout << " Destruido: " << getNome();
+	cout << " Destruido: " << getNome() << endl;
 }

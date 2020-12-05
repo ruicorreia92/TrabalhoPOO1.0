@@ -151,7 +151,6 @@
     <ClInclude Include="Mundo.h" />
     <ClInclude Include="Territor.h" />
     <ClInclude Include="Territ_inic.h" />
-    <ClInclude Include="Tipos.h" />
     <ClInclude Include="utilis.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

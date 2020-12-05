@@ -9,14 +9,22 @@
 #include <stdio.h>
 #include <string.h>
 #include "Mundo.h"
+#include "Territ_inic.h"
 #include "territor.h"
 #include "Func_Aux.h"
-#include "Tipos.h"
 #include "utilis.h"
 
 using namespace std;
 
+string nomeI = "MeuImperio";
+
+int ar = intUniformRnd( 0, 3);
+
 Mundo a("Mundo_1");
+
+
+Territ_inic ini(nomeI, 9, ar, 1, 1, 0);
+
 
 int escolheOpcao(vector<string> opcoes) {
 	for (unsigned int i = 0; i < opcoes.size(); ++i)
@@ -71,8 +79,12 @@ void acrecentaterr() {// Pede ao utilizador o tipo de territorio e a quantidade 
 
 
 void listaterr() {
+	cout << ini.getAsString() << endl;
 	cout << a.getAsString() << endl;
+	
 }
+
+
 
 string leComandos(string namef, int* it) {
 	string cmd;

@@ -44,11 +44,11 @@ int territor::getRes()const {
 
 string territor::getAsString()const {
 	ostringstream oss;
-	oss << "\nNome: " << nome
-		<< "\nResistencia: " << res
-		<< "\nProdutos1: " << prod1
-		<< "\nProdutos2: " << prod2
-		<< "\nGold1: " << ouro1
-		<< "\nGold2: " << ouro2 << endl;
+	oss << "\n Nome: " << nome
+		<< "\n Resistencia: " << res
+		<< "\n Produtos1: " << prod1
+		<< "\n Produtos2: " << prod2
+		<< "\n Gold1: " << ouro1
+		<< "\n Gold2: " << ouro2 << endl;
 	return oss.str();
 }
