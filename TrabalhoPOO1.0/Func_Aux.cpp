@@ -29,7 +29,7 @@ int escolheOpcao(vector<string> opcoes) {
 
 	int opcao = -1;
 	do {
-		opcao = lerInt("\nopcao > ");
+		opcao = lerInt("\nOpcao > ");
 	} while (opcao < 0 || opcao >= opcoes.size());
 	return opcao;
 }
