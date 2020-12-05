@@ -38,13 +38,13 @@ void Territ_inic::conquist(const string name, int res, int prod1, int prod2, int
 string Territ_inic::getAsString()const {
 	ostringstream oss;
 
-	oss << "\n Nome " << nomeIni
-		<< "\n Resistencia " << res
-		<< "\n Forca Militar " << army
-		<< "\n Produtos " << prod1
-		<< "\n Ouro " << ouro1
-		<< "\n Pontos conquistados " << pontos
-		<< "\n tem " << terrconqui.size() << " territorios conquistados\n";
+	oss << "\n Nome: " << nomeIni
+		<< "\n Resistencia: " << res
+		<< "\n Forca Militar: " << army
+		<< "\n Produtos: " << prod1
+		<< "\n Ouro: " << ouro1
+		<< "\n Pontos conquistados: " << pontos
+		<< "\n Tem " << terrconqui.size() << " territorios conquistados\n";
 
 	for (vector<territor>::const_iterator it = terrconqui.begin();
 		it != terrconqui.end(); ++it) {
