@@ -8,6 +8,7 @@
 #include<stdio.h>
 #include "Territ_inic.h"
 #include "Territor.h"
+#include "utilis.h"
 
 
 using namespace std;
@@ -15,6 +16,8 @@ using namespace std;
 
 
 Territ_inic::Territ_inic(string nome2, int r, int amy, int p1, int g1, int ptt) {
+	initRandom();
+	amy = intUniformRnd(0, 3);
 
 	nomeIni = nome2;
 	res = r;

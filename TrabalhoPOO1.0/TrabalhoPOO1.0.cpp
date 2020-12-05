@@ -8,7 +8,7 @@
 #include <string>
 #include <climits>
 #include <stdlib.h>
-#include<stdio.h>
+#include <stdio.h>
 #include <cstdio>
 #include "Mundo.h"
 #include "Territ_inic.h"

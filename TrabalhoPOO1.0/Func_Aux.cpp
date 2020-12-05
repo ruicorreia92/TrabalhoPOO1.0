@@ -18,12 +18,9 @@ using namespace std;
 
 string nomeI = "MeuImperio";
 
-int ar = intUniformRnd( 0, 3);
-
 Mundo a("Mundo_1");
 
-
-Territ_inic ini(nomeI, 9, ar, 1, 1, 0);
+Territ_inic ini(nomeI, 9, 0, 1, 1, 0);
 
 
 int escolheOpcao(vector<string> opcoes) {
@@ -119,7 +116,7 @@ void criadoficheiro(string namef) {
 			a.acrescentar(tipo, x, b, c, d, e);
 		cont++;
 	}
-	cout << "\Foram Criados: " << cont << " territorios\n\n";
+	cout << "\ Foram Criados: " << cont << " territorios\n\n";
 	fich1.close();
 }
 
