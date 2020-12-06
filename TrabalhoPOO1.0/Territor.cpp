@@ -15,7 +15,22 @@ string s;
 
 using namespace std;
 
-territor::territor(const string name, int r, int p1, int p2, int g1, int g2) {
+void resetIderr() {
+	Idterr = 1;
+}
+
+territor::territor(const string name, int r, int p1, int p2, int g1, int g2, int flag) {
+	
+	
+	if (flag == 1) {
+		nome = name;
+		res = r;
+		prod1 = p1;
+		prod2 = p2;
+		ouro1 = g1;
+		ouro2 = g2;
+
+	}else {
 	ostringstream ostr;
 	ostr << Idterr;
 	s = ostr.str();
@@ -27,7 +42,10 @@ territor::territor(const string name, int r, int p1, int p2, int g1, int g2) {
 	ouro1 = g1;
 	ouro2 = g2;
 	Idterr++;
+	}
 }
+
+
 
 territor::~territor() {
 	/*cout << "destruido:" << getNome();*/

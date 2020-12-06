@@ -8,7 +8,10 @@
 #include <climits>
 #pragma once
 
+
 using namespace std;
+
+void resetIderr();
 
 class territor
 {
@@ -20,7 +23,7 @@ class territor
 	int ouro2;
 public:
 
-	territor(const string name, int r, int p1, int p2, int g1, int g2);
+	territor(const string name, int r, int p1, int p2, int g1, int g2,int flag = 0);
 	~territor();
 	int getRes()const;
 	int getP1()const;

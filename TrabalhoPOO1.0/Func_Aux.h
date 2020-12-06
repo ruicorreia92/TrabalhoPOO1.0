@@ -17,6 +17,7 @@ using namespace std;
 int escolheOpcao(vector<string> opcoes);
 int lerInt(string msg);
 void acrecentaterr();
+void remover();
 void listaterr();
 void conquiterr();
 void criadoficheiro(string namef);

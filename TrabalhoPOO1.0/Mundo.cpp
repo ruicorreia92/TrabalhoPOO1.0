@@ -22,6 +22,11 @@ void Mundo::acrescentar(const string name, int res, int prod1, int prod2, int go
 	territ.push_back(territor(name, res, prod1, prod2, gold1, gold2));
 }
 
+void Mundo::limpar() {
+
+	territ.clear();
+	
+}
 
 string Mundo::getAsString()const {
 	ostringstream oss;

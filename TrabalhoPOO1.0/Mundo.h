@@ -22,6 +22,7 @@ public:
 	int verificavector(string str, int *resis);
 	// acrescenta um territorio
 	void acrescentar(const string name, int res, int prod1, int prod2, int gold1, int gold2);
+	void limpar();
 	// remove uma objeto do vector  de territorios
 	int remove1(string namet, int* r, int* p1, int* p2, int* gd1, int* gd2);
 	//retorna o nome

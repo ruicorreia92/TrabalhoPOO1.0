@@ -12,7 +12,11 @@
 
 using namespace std;
 
+void Territ_inic::clean() {
 
+	terrconqui.clear();
+
+}
 
 Territ_inic::Territ_inic(string nome2, int r, int amy, int p1, int g1, int ptt) {
 	initRandom();
@@ -30,7 +34,7 @@ Territ_inic::Territ_inic(string nome2, int r, int amy, int p1, int g1, int ptt) 
 
 void Territ_inic::conquist(const string name, int res, int prod1, int prod2, int gold1, int gold2) {
 
-	terrconqui.push_back(territor(name, res, prod1, prod2, gold1, gold2));
+	terrconqui.push_back(territor(name, res, prod1, prod2, gold1, gold2,1));
 }
 
 
@@ -59,6 +63,20 @@ string Territ_inic::getNome()const {
 
 int Territ_inic::getArmy()const {
 	return army;
+}
+void Territ_inic::setArmy() {
+	if (getArmy() >= 1)
+		army -= 1;
+
+}
+void Territ_inic::resetArmy() {
+
+	army = intUniformRnd(0, 3);
+
+}
+
+void Territ_inic::setPontos() {
+	pontos += 1;
 }
 
 Territ_inic::~Territ_inic() {

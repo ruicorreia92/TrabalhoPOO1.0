@@ -74,6 +74,13 @@ void acrecentaterr() {// Pede ao utilizador o tipo de territorio e a quantidade 
 	return;
 }
 
+void remover() {
+	
+	a.limpar();
+	ini.clean();
+	resetIderr();
+	ini.resetArmy();
+}
 
 void listaterr() {
 	cout << ini.getAsString() << endl;
@@ -95,7 +102,7 @@ string leComandos(string namef, int* it) {
 	fich1.seekg(*it);
 	getline(fich1, cmd);
 	*it += (cmd.size() + 2);
-	cout << "\nFoi lido o comando: " << cmd << endl;
+	cout << "\n Foi lido o comando: " << cmd << endl;
 	fich1.close();
 
 	return cmd;
@@ -129,8 +136,8 @@ int verificaTipo(string t) {
 			return cont;
 		}cont++;
 	}
-	cout << "\nTipo nao existe ou foi mal Escrito.\n";
-	cout << "\nExemplo: Montanha // Planicie\n";
+	cout << "\n Tipo nao existe ou foi mal Escrito.\n";
+	cout << "\n Exemplo: Montanha // Planicie\n";
 	return -1;
 }
 
@@ -142,8 +149,8 @@ int verificaCom(vector<string> cm, string t) {
 			return cont;
 		}cont++;
 	}
-	cout << "\nComando nao existe ou foi mal Escrito.\n";
-	cout << "Exemplo: Carrega // Cria\n";
+	cout << "\n Comando nao existe ou foi mal Escrito.\n";
+	cout << " Exemplo: Carrega // Cria\n";
 	return -1;
 }
 
@@ -154,7 +161,7 @@ int verificaQuant(string qt) {
 			res = 0;
 	}
 	if (res == 0)
-		cout << "\nNumero Invalido\n";
+		cout << "\n Numero Invalido\n";
 	return res;
 }
 
@@ -164,7 +171,7 @@ int transferTerr(string nometerr) {
 	int res, pr1, pr2, g1, g2;
 	confirm = a.remove1(nometerr, &res, &pr1, &pr2, &g1, &g2);
 	if (confirm == 1) {
-		ini.conquist(name, res, pr1, pr2, g1, g2);
+		ini.conquist(nometerr, res, pr1, pr2, g1, g2);
 		return 1;
 	}
 	return 0;
@@ -187,13 +194,17 @@ void conquiterr() {
 	nAle = intUniformRnd(0, 3);
 	nAle += ini.getArmy();
 	if (nAle > resT) {
-	checkT = transferTerr(nTer);
-	if (checkT == 1) {
-		cout << "\n Territorio: " << nTer << " foi conquistado\n";
+		checkT = transferTerr(nTer);
+		if (checkT == 1) {
+			cout << "\n Territorio: " << nTer << " foi conquistado\n";
+			ini.setPontos();
+		}
+			
 	}
+	else {
+		cout << "\n Territorio: " << nTer << " resistiu ao ataque\n";
+		ini.setArmy();
 	}
-
-
 }
 
 

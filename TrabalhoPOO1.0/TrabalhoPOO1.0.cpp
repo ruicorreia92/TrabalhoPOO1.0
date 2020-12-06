@@ -23,7 +23,7 @@ int main() {
 
 	initRandom();
 
-	string aux, aux1, aux2, wait;
+	string aux, aux1, aux2;
 	int opcao = 0;
 	int it = 0, cont, flag = 0;
 	vector<string> comandos = { "Carrega","Cria","Conquista","Passa", "Maisouro",
@@ -41,10 +41,11 @@ int main() {
 		if (opcao == 0) {//se escolher o comando Carrega
 			do {
 				if (flag == 1) {
-					cout << " Pressione Enter para continuar..." << endl;
-				}
-				wait = getchar();
-				flag = 1;
+					remover();
+				 }
+			
+				system("PAUSE");
+				
 				aux2 = leComandos("comandos.txt", &it);
 			
 
@@ -71,23 +72,21 @@ int main() {
 				case 16: // <sair>
 				{
 					cout << "\n Fim da leitura de comandos\n";
+					flag = 1;
 				}
 				break;
 				}
 
 			} while (cont != 16);
-
+			
+			
+			
 			it = 0;
 			opcao = -1;
 		}
 
 		switch (opcao) {
-		case 0: // Carrega
-
-			cout << "\n Digite o nome do ficheiro: ";
-			cin >> aux;
-			criadoficheiro(aux);
-			break;
+	
 		case 1: // Cria
 		{
 			acrecentaterr();
