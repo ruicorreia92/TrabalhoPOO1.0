@@ -48,6 +48,7 @@ string Territ_inic::getAsString()const {
 		<< "\n Ouro: " << ouro1
 		<< "\n Pontos conquistados: " << pontos
 		<< "\n Tem " << terrconqui.size() << " territorios conquistados\n";
+		
 
 	for (vector<territor>::const_iterator it = terrconqui.begin();
 		it != terrconqui.end(); ++it) {

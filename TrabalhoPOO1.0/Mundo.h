@@ -16,10 +16,14 @@ class Mundo
 {
 	vector<territor> territ;
 	string nome;
+	int ano = 1;
+	int turno = 1;
+
 public:
+	
 	Mundo(string nome);
 
-	//Retorna a resitencia do territorio atacado
+	//Verifica se o territorio exixte no vector e passa o valor da sua resistencia para variavel *resis
 	int verificavector(string str, int *resis);
 	// acrescenta um territorio
 	void acrescentar(const string name, int res, int prod1, int prod2, int gold1, int gold2);

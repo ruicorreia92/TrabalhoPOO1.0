@@ -18,38 +18,12 @@ using namespace std;
 
 string nomeI = "MeuImperio";
 
-Mundo a("Mundo_1");
+Mundo a("Mundo");//Cria o Mundo 
 
-Territ_inic ini(nomeI, 9, 0, 1, 1, 0);
+Territ_inic ini(nomeI, 9, 0, 1, 1, 0);//Cria o territorio inicial
 
-
-int escolheOpcao(vector<string> opcoes) {
-	for (unsigned int i = 0; i < opcoes.size(); ++i)
-		cout << endl << i << " - " << opcoes[i];
-
-	int opcao = -1;
-	do {
-		opcao = lerInt("\nOpcao > ");
-	} while (opcao < 0 || opcao >= opcoes.size());
-	return opcao;
-}
-int lerInt(string msg) {
-	int valor;
-	bool leu = false;
-	do {
-		cout << msg;
-		string s;
-		cin >> s;
-		istringstream iss(s);
-		if (iss >> valor) // se correu bem a leitura
-			leu = true;
-	} while (!leu);
-	return valor;
-}
-
-
-
-void acrecentaterr() {// Pede ao utilizador o tipo de territorio e a quantidade e insere no vector de territorios
+// Pede ao utilizador o tipo de territorio e a quantidade e insere no vector de territorios
+void acrecentaterr() {
 
 	string namet;
 	string qut;
@@ -70,10 +44,11 @@ void acrecentaterr() {// Pede ao utilizador o tipo de territorio e a quantidade 
 	for (i = 0; i < quant; i++) {
 		a.acrescentar(namet, r, p1, p2, g1, g2);
 	}
-
+	cout << "\nForam Criados: " << quant << "territorios\n";
 	return;
 }
 
+//Quando o comando <Carrega> e chamado mais que uma vez faz reset aos vectores de territorios
 void remover() {
 	
 	a.limpar();
@@ -82,14 +57,38 @@ void remover() {
 	ini.resetArmy();
 }
 
-void listaterr() {
-	cout << ini.getAsString() << endl;
-	cout << a.getAsString() << endl;
-	
+//Mostra toda informação do jogo
+void listaterr(int al) {
+	char opc;
+	int opp = 0;
+	string consulta;
+	do {
+		cout << "\nDeseja listar um Territorio(U) ou todos(T): U//T: ";
+		cin >> opc;
+	} while (opc != 'U' && opc != 'T');
+	if (opc == 'T') {
+		cout << ini.getAsString();
+		cout << " Ultimo numero aleatorio: " << al << endl << endl;
+		cout << a.getAsString() << endl;
+	}else
+		if (opc == 'U') {
+			do {
+				cout << "Imperio ou Mundo? ";
+				cin >> consulta;
+				if (consulta == "Imperio") {
+					cout << ini.getAsString() << endl;
+					opp = 1;
+				}
+				if (consulta == "Mundo") {
+					cout << a.getAsString() << endl;
+					opp = 1;
+				}
+			} while (opp == 0);
+		}
 }
 
 
-
+//Le os comandos de um ficheiro de texto em sequencia e devolve o comando pra execucao
 string leComandos(string namef, int* it) {
 	string cmd;
 	ifstream fich1(namef);
@@ -108,6 +107,7 @@ string leComandos(string namef, int* it) {
 	return cmd;
 }
 
+//Cria uma serie de territorios a partir de um ficheiro de texto
 void criadoficheiro(string namef) {
 	int x, b, c, d, e, cont = -1;
 	string tipo;
@@ -127,6 +127,22 @@ void criadoficheiro(string namef) {
 	fich1.close();
 }
 
+
+//Verifica se o comando Digitado existe ou foi mal escrito
+int verificaCom(vector<string> cm, string t) {
+	int cont = 0;
+	for (vector<string>::const_iterator it = cm.begin();
+		it != cm.end(); ++it) {
+		if (*it == t) {
+			return cont;
+		}cont++;
+	}
+	cout << "\n Comando nao existe ou foi mal Escrito.\n";
+	cout << " Exemplo: Carrega // Cria\n";
+	return -1;
+}
+
+//Verifica se o Tipo de territorio a ser criado existe ou foi mal digitado
 int verificaTipo(string t) {
 	int cont = 0;
 	vector<string> ter = { "Planicie","Montanha", "Fortaleza", "Mina", "Duna", "Castelo", "Refugio", "Pescaria" };
@@ -141,19 +157,7 @@ int verificaTipo(string t) {
 	return -1;
 }
 
-int verificaCom(vector<string> cm, string t) {
-	int cont = 0;
-	for (vector<string>::const_iterator it = cm.begin();
-		it != cm.end(); ++it) {
-		if (*it == t) {
-			return cont;
-		}cont++;
-	}
-	cout << "\n Comando nao existe ou foi mal Escrito.\n";
-	cout << " Exemplo: Carrega // Cria\n";
-	return -1;
-}
-
+//Verifica se a quantidade a ser criada e um numero inteiro
 int verificaQuant(string qt) {
 	int i, res = 1;
 	for (i = 0; i < qt.size(); i++) {
@@ -165,6 +169,7 @@ int verificaQuant(string qt) {
 	return res;
 }
 
+//Copia os dados de um territorio depois apaga do vector; Adiciona um novo territorio ao imperio com os dados copiados
 int transferTerr(string nometerr) {
 	string name;
 	int confirm;
@@ -177,12 +182,14 @@ int transferTerr(string nometerr) {
 	return 0;
 }
 
-
-void conquiterr() {
+//Funcao principal de conquista pede ao utilizador o territorio a conquistar
+//verifica se existe, Gera o numero aleatorio para a funcao 
+//Informa o utilizador do resultado da operação , atualiza os valores e retorna o numero aleatorio gerado
+int conquiterr() {
 	initRandom();
 	string nTer;
 	int resT = 0;
-	int flag, nAle = 0, checkT;
+	int flag, nAle = 0, arma, checkT;
 	do {
 		cout << "\n Qual o territorio que deseja conquistar: \n";
 		cin >> nTer;
@@ -192,8 +199,9 @@ void conquiterr() {
 		}
 	} while (flag == 0);
 	nAle = intUniformRnd(0, 6);
-	nAle += ini.getArmy();
-	if (nAle > resT) {
+	arma = nAle;
+	arma += ini.getArmy();
+	if (arma > resT) {
 		checkT = transferTerr(nTer);
 		if (checkT == 1) {
 			cout << "\n Territorio: " << nTer << " foi conquistado\n";
@@ -205,9 +213,10 @@ void conquiterr() {
 		cout << "\n Territorio: " << nTer << " resistiu ao ataque\n";
 		ini.setArmy();
 	}
+	return nAle;
 }
 
-
+//Funcao que devolve os parametros iniciais par a criacao de territorios conforme o tipo
 void param(int tipo, int* r, int* p1, int* p2, int* g1, int* g2) {
 	if (tipo == 0)//Planicie
 	{

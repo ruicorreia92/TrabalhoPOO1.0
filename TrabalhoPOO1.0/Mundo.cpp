@@ -31,8 +31,10 @@ void Mundo::limpar() {
 string Mundo::getAsString()const {
 	ostringstream oss;
 
-	oss << "\n Nome: " << nome
-		<< " Tem " << territ.size() << " territorios \n";
+	oss <<" " << nome
+		<< "\n Ano: " << ano
+		<< "\n Turno: " << turno
+		<< "\n Tem " << territ.size() << " territorios \n";
 
 	for (vector<territor>::const_iterator it = territ.begin();
 		it != territ.end(); ++it) {
@@ -42,7 +44,7 @@ string Mundo::getAsString()const {
 	return oss.str();
 }
 
-
+//Verifica se o territorio exixte no vector e passa o valor da sua resistencia para variavel *resis
 int Mundo::verificavector(string str, int *resis) {
 
 	for (vector<territor>::const_iterator it = territ.begin(); it != territ.end(); ++it) {
@@ -54,6 +56,7 @@ int Mundo::verificavector(string str, int *resis) {
 	return 0;
 }
 
+//Faz a copia dos dados de um territorio e remove o territorio do vector
 int Mundo::remove1(string namet,int *r, int *p1, int *p2, int *gd1, int *gd2) {
 
 	for (vector<territor>::const_iterator it = territ.begin(); it != territ.end(); ++it) {
@@ -69,7 +72,6 @@ int Mundo::remove1(string namet,int *r, int *p1, int *p2, int *gd1, int *gd2) {
 	}return 0;
 
 }
-
 
 
 string Mundo::getNome()const {

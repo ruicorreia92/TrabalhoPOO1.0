@@ -90,7 +90,7 @@ string territor::getAsString()const {
 }
 
 territor& territor::operator=(const territor& ob) {
-	if (this == &ob) { // prevencao da auto-atribuição
+	if (this == &ob) { 
 		return *this;
 	}
 }

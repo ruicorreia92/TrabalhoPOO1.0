@@ -19,19 +19,24 @@
 using namespace std;
 
 
+
 int main() {
 
 	initRandom();
 
-	string aux, aux1, aux2;
+	string aux, aux1, aux2, aux3;
 	int opcao = 0;
+	int nalet = 0;
 	int it = 0, cont, flag = 0;
 	vector<string> comandos = { "Carrega","Cria","Conquista","Passa", "Maisouro",
 	   "Maisprod", "Maismilitar", "Adquire", "Lista", "Avanca",
 	   "Grava", "Ativa", "Apaga", "Toma", "Modifica", "Fevento", "Sair" };
 
 	cout << "\n Bem Vindo ao\n"
-		<< "\n    IMPERIO\n";
+		<< "\n    IMPERIO\n\n";
+	system("PAUSE");
+	/*cout << "Prima uma tecla pra continuar";
+	aux3 =	getchar();*/
 
 	do {
 		cout << "\n Digite um Comando: \n";
@@ -43,7 +48,8 @@ int main() {
 				if (flag == 1) {
 					remover();// Se ja foi lido o Comando <Carrega> se for novamente chamado faz reset aos valores e Vectores 
 				 }
-			
+				/*cout << "Prima uma tecla pra continuar";
+				aux3 =	getchar();*/
 				system("PAUSE");//Prima uma tecla pra continuar
 				
 				aux2 = leComandos("comandos.txt", &it);//Le os comandos de um ficheiro
@@ -61,12 +67,12 @@ int main() {
 				break;
 				case 2: // <Conquista>  Inicia a tentativa de conquista
 				{
-					conquiterr();//Se correr bem atualiza os vectores ; Remove o territorio conquistado e insere em outor vector
+					nalet = conquiterr();//Se correr bem atualiza os vectores ; Remove o territorio conquistado e insere em outor vector
 				}
 				break;
 				case 8: // <Lista>  Mostra no ecra a Informação do territorio inicial e dos territorios do mundo
 				{
-					listaterr();
+					listaterr(nalet);
 				}
 				break;
 				case 16: // <sair>
@@ -93,12 +99,12 @@ int main() {
 		break;
 		case 2: // <Conquista>  Inicia a tentativa de conquista
 		{
-			conquiterr();
+			nalet = conquiterr();
 		}
 		break;
 		case 8: // <Lista>  Mostra no ecra a Informação do territorio inicial e dos territorios do mundo
 		{
-			listaterr();
+			listaterr(nalet);
 		}
 		break;
 		case 16: // sair

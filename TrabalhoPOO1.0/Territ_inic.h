@@ -29,19 +29,22 @@ public:
 
 	void clean();
 
+	//Construtor
 	Territ_inic(string nome2, int r, int amy, int p1, int g1, int ptt);
 
-	// acrescenta o territorio conquistado ao Imperio
+	// acrescenta o territorio
 	void conquist(const string name, int res, int prod1, int prod2, int gold1, int gold2);
 	//retorna o nome
 	string getNome()const;
+	//retorna a forca militar
 	void setArmy();
+	//Altera o valor da forca militar
 	void resetArmy();
 	// retorna a potencia militar do terrirtorio inicial
 	int getArmy()const;
-	
 	// retorna uma string com a descricao do objecto
 	string getAsString()const;
+	// Altera o valor dos pontos
 	void setPontos();
 	~Territ_inic();
 

@@ -14,12 +14,10 @@
 
 using namespace std;
 
-int escolheOpcao(vector<string> opcoes);
-int lerInt(string msg);
 void acrecentaterr();
 void remover();
-void listaterr();
-void conquiterr();
+void listaterr(int al);
+int conquiterr();
 void criadoficheiro(string namef);
 string leComandos(string namef, int* it);
 int verificaTipo(string t);
