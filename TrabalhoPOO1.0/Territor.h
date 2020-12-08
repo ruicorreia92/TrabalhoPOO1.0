@@ -32,6 +32,7 @@ public:
 	int getG2()const;
 	string getNome()const;
 	string getAsString()const;
+	territor & operator=(const territor& ob);
 };
 
 

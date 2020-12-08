@@ -1,5 +1,5 @@
 // TrabalhoPOO1.0.cpp : This file contains the 'main' function. Program execution begins and ends there.
-//Add RuiCorreia
+
 
 #include <iostream>
 #include <fstream>
@@ -36,17 +36,17 @@ int main() {
 	do {
 		cout << "\n Digite um Comando: \n";
 		cin >> aux1;
-		opcao = verificaCom(comandos, aux1);
+		opcao = verificaCom(comandos, aux1);//Verifica se o comando existe ou foi escrito corretamente
 
 		if (opcao == 0) {//se escolher o comando Carrega
 			do {
 				if (flag == 1) {
-					remover();
+					remover();// Se ja foi lido o Comando <Carrega> se for novamente chamado faz reset aos valores e Vectores 
 				 }
 			
-				system("PAUSE");
+				system("PAUSE");//Prima uma tecla pra continuar
 				
-				aux2 = leComandos("comandos.txt", &it);
+				aux2 = leComandos("comandos.txt", &it);//Le os comandos de um ficheiro
 			
 
 				cont = verificaCom(comandos, aux2);
@@ -61,7 +61,7 @@ int main() {
 				break;
 				case 2: // <Conquista>  Inicia a tentativa de conquista
 				{
-					conquiterr();
+					conquiterr();//Se correr bem atualiza os vectores ; Remove o territorio conquistado e insere em outor vector
 				}
 				break;
 				case 8: // <Lista>  Mostra no ecra a Informação do territorio inicial e dos territorios do mundo
@@ -79,8 +79,6 @@ int main() {
 
 			} while (cont != 16);
 			
-			
-			
 			it = 0;
 			opcao = -1;
 		}
@@ -89,7 +87,7 @@ int main() {
 	
 		case 1: // Cria
 		{
-			acrecentaterr();
+			acrecentaterr();//Acrecenta territorios manualmente
 
 		}
 		break;

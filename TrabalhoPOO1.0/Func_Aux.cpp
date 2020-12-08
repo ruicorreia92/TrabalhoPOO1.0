@@ -191,7 +191,7 @@ void conquiterr() {
 			cout << "\n O Territorio escolhido nao existe\n";
 		}
 	} while (flag == 0);
-	nAle = intUniformRnd(0, 3);
+	nAle = intUniformRnd(0, 6);
 	nAle += ini.getArmy();
 	if (nAle > resT) {
 		checkT = transferTerr(nTer);

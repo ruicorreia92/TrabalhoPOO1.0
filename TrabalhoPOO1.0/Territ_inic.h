@@ -31,7 +31,7 @@ public:
 
 	Territ_inic(string nome2, int r, int amy, int p1, int g1, int ptt);
 
-	// acrescenta um territorio
+	// acrescenta o territorio conquistado ao Imperio
 	void conquist(const string name, int res, int prod1, int prod2, int gold1, int gold2);
 	//retorna o nome
 	string getNome()const;

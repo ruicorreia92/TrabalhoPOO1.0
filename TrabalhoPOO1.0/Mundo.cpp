@@ -70,6 +70,8 @@ int Mundo::remove1(string namet,int *r, int *p1, int *p2, int *gd1, int *gd2) {
 
 }
 
+
+
 string Mundo::getNome()const {
 	return nome;
 }

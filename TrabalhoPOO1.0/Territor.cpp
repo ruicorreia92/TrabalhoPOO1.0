@@ -88,3 +88,9 @@ string territor::getAsString()const {
 		<< "\n Gold2: " << ouro2 << endl;
 	return oss.str();
 }
+
+territor& territor::operator=(const territor& ob) {
+	if (this == &ob) { // prevencao da auto-atribuição
+		return *this;
+	}
+}
