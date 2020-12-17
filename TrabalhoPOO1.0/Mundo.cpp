@@ -59,7 +59,8 @@ int Mundo::verificavector(string str, int *resis) {
 //Faz a copia dos dados de um territorio e remove o territorio do vector
 int Mundo::remove1(string namet,int *r, int *p1, int *p2, int *gd1, int *gd2) {
 
-	for (vector<territor>::const_iterator it = territ.begin(); it != territ.end(); ++it) {
+
+	for (vector<territor>::const_iterator it = territ.begin(); it != territ.end(); it++) {
 		if (it->getNome() == namet) {
 			*r = it->getRes();
 			*p1 = it->getP1();
@@ -67,11 +68,14 @@ int Mundo::remove1(string namet,int *r, int *p1, int *p2, int *gd1, int *gd2) {
 			*gd1 = it->getG1();
 			*gd2 = it->getG2();
 			territ.erase(it);
+
 			return 1;
 		}
+		
 	}return 0;
 
 }
+
 
 
 string Mundo::getNome()const {

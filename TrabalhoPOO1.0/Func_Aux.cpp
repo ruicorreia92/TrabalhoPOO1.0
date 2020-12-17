@@ -44,7 +44,7 @@ void acrecentaterr() {
 	for (i = 0; i < quant; i++) {
 		a.acrescentar(namet, r, p1, p2, g1, g2);
 	}
-	cout << "\nForam Criados: " << quant << "territorios\n";
+	cout << "\nForam Criados: " << quant << " territorios\n";
 	return;
 }
 
