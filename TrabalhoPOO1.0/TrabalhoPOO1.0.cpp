@@ -1,4 +1,4 @@
-// TrabalhoPOO1.0.cpp : This file contains the 'main' function. Program execution begins and ends there.
+ï»¿// TrabalhoPOO1.0.cpp : This file contains the 'main' function. Program execution begins and ends there.
 
 
 #include <iostream>
@@ -50,7 +50,7 @@ int main() {
 				 }
 				/*cout << "Prima uma tecla pra continuar";
 				aux3 =	getchar();*/
-				//system("PAUSE");//Prima uma tecla pra continuar
+				system("PAUSE");//Prima uma tecla pra continuar
 				//getc(stdin);
 				
 				aux2 = leComandos("comandos.txt", &it);//Le os comandos de um ficheiro
@@ -71,7 +71,7 @@ int main() {
 					nalet = conquiterr();//Se correr bem atualiza os vectores ; Remove o territorio conquistado e insere em outor vector
 				}
 				break;
-				case 8: // <Lista>  Mostra no ecra a Informação do territorio inicial e dos territorios do mundo
+				case 8: // <Lista>  Mostra no ecra a Informaï¿½ï¿½o do territorio inicial e dos territorios do mundo
 				{
 					listaterr(nalet);
 				}
@@ -103,7 +103,7 @@ int main() {
 			nalet = conquiterr();
 		}
 		break;
-		case 8: // <Lista>  Mostra no ecra a Informação do territorio inicial e dos territorios do mundo
+		case 8: // <Lista>  Mostra no ecra a Informaï¿½ï¿½o do territorio inicial e dos territorios do mundo
 		{
 			listaterr(nalet);
 		}
