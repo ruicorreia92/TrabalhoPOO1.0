@@ -50,8 +50,8 @@ int main() {
 				 }
 				/*cout << "Prima uma tecla pra continuar";
 				aux3 =	getchar();*/
-				//system("PAUSE");//Prima uma tecla pra continuar
-				getc(stdin);
+				system("PAUSE");//Prima uma tecla pra continuar
+				//getc(stdin);
 				
 				aux2 = leComandos("comandos.txt", &it);//Le os comandos de um ficheiro
 			
