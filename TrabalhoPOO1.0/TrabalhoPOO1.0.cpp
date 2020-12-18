@@ -37,7 +37,7 @@ int main() {
 	system("PAUSE");
 	/*cout << "Prima uma tecla pra continuar";
 	aux3 =	getchar();*/
-
+	
 	do {
 		cout << "\n Digite um Comando: \n";
 		cin >> aux1;
