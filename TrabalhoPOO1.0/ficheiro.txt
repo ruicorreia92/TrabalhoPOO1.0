@@ -1,16 +1,16 @@
-Planicie 5 1 2 1 1
-Planicie 5 1 2 1 1
-Montanha 6 1 1 0 0
-Montanha 6 1 1 0 0
-Fortaleza 8 0 0 0 0
-Fortaleza 8 0 0 0 0
-Mina 5 0 0 1 2
-Mina 5 0 0 1 2
-Duna 4 1 1 0 0
-Duna 4 1 1 0 0
-Castelo 7 3 3 1 1
-Castelo 7 3 3 1 1
-Refugio 9 0 0 1 1
-Refugio 9 0 0 1 1
-Pescaria 9 2 4 0 0
-Pescaria 9 2 4 0 0
+Planicie
+Planicie
+Montanha
+Montanha
+Fortaleza
+Fortaleza
+Mina
+Mina
+Duna
+Duna
+Castelo
+Castelo
+Refugio
+Refugio
+Pescaria
+Pescaria

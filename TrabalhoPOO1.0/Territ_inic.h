@@ -16,8 +16,7 @@
 using namespace std;
 
 class Territ_inic
-{   
-	vector<territor> terrconqui;
+{
 	string nomeIni;
 	int res;
 	int army;
